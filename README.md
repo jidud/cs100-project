@@ -5,7 +5,7 @@
 # Movie Recommender
  > Your author list below should include links to all members GitHub (remove existing author).
  
- > Authors: [Jenny Lee](https://github.com/jidud), 
+ > Authors: [Jenny Lee](https://github.com/jidud), [Avnish Kovi](https://github.com/Avikovi)
 
  > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
 
@@ -18,15 +18,17 @@
 
 ## Project Description
 #### General description
-In this program movies are going to be organized into their respective categories based on genre.
+In this program, movies are going to be organized into their respective categories based on genre. Given a movie, the progam will be able to recommend a list of films similar to the movie that was provided.
 <!-- > Your project description should summarize the project you are proposing. Be sure to include:
  > * Why is it important or interesting to you? -->
 #### Why is it important
-This project is important because the topic was interesting and it seemed fun to code a movie recommender. In this project, movies will be categorized into their respective genres.
+This project is important because the topic was interesting and it seemed fun to code a movie recommender. Most people waste time browsing streaming sites trying to find a movie that they may like, however, this program cuts off that time searching by automatically giving them a list of movies, hence saving large amounts of time. In this project, movies will be categorized into their respective genres.
 
  <!-- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project) -->
 #### Languages/tools/technologies
 C++ - This project will be programmed in c++
+CMake - This will be used to compile the program
+googletest (gtest) - This will be used for unit testing
  <!-- > * What will be the input/output of your project? -->
 #### Input/Output
 Input - 
@@ -36,6 +38,8 @@ Output -
  <!-- > * What are the features that the project provides? -->
 #### Project features
  <!-- > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. -->
+In this project, movies will be sorted and categorized into their respective genres. The program will display movies using under certain genres/subgenres. A user will be able to provide a name of a movie and the application will return a list of movies that are similar to the provided movie.
+
  > 
  > You also need to set up an empty project board using GitHub projects (board view). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added.
  > ## Phase II
