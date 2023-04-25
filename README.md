@@ -5,7 +5,7 @@
 # Movie Recommender
  > Your author list below should include links to all members GitHub (remove existing author).
  
- > Authors: [Jenny Lee](https://github.com/jidud), [Avnish Kovi](https://github.com/Avikovi), [Shelby Wong](https://github.com/ShelbyMitsuko)
+ > Authors: [Jenny Lee](https://github.com/jidud), [Avnish Kovi](https://github.com/Avikovi), [Shelby Wong](https://github.com/ShelbyMitsuko), [Zifeng Lei](https://github.com/Zifeng-Lei)
 
  > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
 
@@ -27,13 +27,19 @@ This project is important because the topic was interesting and it seemed fun to
  <!-- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project) -->
 #### Languages/tools/technologies
 C++ - This project will be programmed in c++
+
 CMake - This will be used to compile the program
+
 googletest (gtest) - This will be used for unit testing
+
+Git - This will use for performing version control
+
+GitHub - This will use as a web-based Git repository
  <!-- > * What will be the input/output of your project? -->
 #### Input/Output
-Input - 
+Input - This project will pre input a certain number of movies along with their respective genres, elements, rating, etc. For users, the input for this project can be a specific genre or subgenre of movies, or a combination of multiple tags or criteria. The input can also be the name of a certain movie. This project can also input sorting criteria.
 
-Output - 
+Output - The output of this project is a list of movies, which can be based on the input genre or the combination of labels. The list of movies can also contain movies that are similar in genre, elements, and other aspects to the input movie. The movie list output can be sorted based on the input criteria.
 
  <!-- > * What are the features that the project provides? -->
 #### Project features
