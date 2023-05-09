@@ -34,7 +34,7 @@ Output - The output of this project is a list of movies, which can be based on t
 In this project, movies will be sorted and categorized into their respective genres. The program will display movies using under certain genres/subgenres. A user will be able to provide a name of a movie and the application will return a list of movies that are similar to the provided movie.
 
  > ## Phase II
- <!-- > > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
+ <!-- > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
  > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
  >   * Break down the "Epics" into smaller actionable user stories (i.e. smaller development tasks). Convert them into issues and assign them to team members. Place these in the `TODO` column.
@@ -43,19 +43,17 @@ In this project, movies will be sorted and categorized into their respective gen
  >   * The first check-in needs to be scheduled with your lab TA. During that meeting, you will discuss your project design/class diagram from phase II.
  >   * The second check-in should be scheduled with a reader. During that meeting you will discuss:
  >     * The tasks you are planning for the first sprint
- >     * How work will be divided between the team members-->
+ >     * How work will be divided between the team members -->
 ## User Interface Specification
- <!-- >> Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc))-->
-
-
+ <!-- > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc)) -->
 
 ### Navigation Diagram
-<!-- >> Draw a diagram illustrating how the user can navigate from one screen to another. Here is an [example](https://creately.com/diagram/example/ikfqudv82/user-navigation-diagram-classic?r=v). It can be useful to label each symbol that represents a screen so that you can reference the screens in the next section or the rest of the document if necessary. Give a brief description of what the diagram represents.-->
+![Navigation diagram](ImageFiles/navigation_diagram.png)
 
-![Navigation Diagram](ImageFiles/Navigation_Diagram.png)
+The diagram above gives a basic guideline to our screen layout. From the menu, we would be able to search a movie based on genre, name/title, and/or by actor/director. There will be a filter tab where we would be able to include/exclude and sort out the movies based on sub-genres, name/title, date/year, actor/director, and rating. After all choices are chosen the user would able to "enter" and get a movie recommended by their choice.
 
 ### Screen Layouts
-<!-- >> Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.-->
+<!-- /*> Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.*/ -->
 
 This is the layout of each of our screens ([here](ImageFiles/Screen_Layouts.png)).
 
