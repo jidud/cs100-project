@@ -34,7 +34,7 @@ Output - The output of this project is a list of movies, which can be based on t
 In this project, movies will be sorted and categorized into their respective genres. The program will display movies using under certain genres/subgenres. A user will be able to provide a name of a movie and the application will return a list of movies that are similar to the provided movie.
 
  > ## Phase II
- > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
+ <!-- > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
  > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
  >   * Break down the "Epics" into smaller actionable user stories (i.e. smaller development tasks). Convert them into issues and assign them to team members. Place these in the `TODO` column.
@@ -43,31 +43,33 @@ In this project, movies will be sorted and categorized into their respective gen
  >   * The first check-in needs to be scheduled with your lab TA. During that meeting, you will discuss your project design/class diagram from phase II.
  >   * The second check-in should be scheduled with a reader. During that meeting you will discuss:
  >     * The tasks you are planning for the first sprint
- >     * How work will be divided between the team members
+ >     * How work will be divided between the team members -->
 ## User Interface Specification
- > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc))
+ <!-- > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc)) -->
 
 ### Navigation Diagram
-> Draw a diagram illustrating how the user can navigate from one screen to another. Here is an [example](https://creately.com/diagram/example/ikfqudv82/user-navigation-diagram-classic?r=v). It can be useful to label each symbol that represents a screen so that you can reference the screens in the next section or the rest of the document if necessary. Give a brief description of what the diagram represents.
+![Navigation diagram](ImageFiles/navigation_diagram.png)
+
+The diagram above gives a basic guideline to our screen layout. From the menu, we would be able to search a movie based on genre, name/title, and/or by actor/director. There will be a filter tab where we would be able to include/exclude and sort out the movies based on sub-genres, name/title, date/year, actor/director, and rating. After all choices are chosen the user would able to "enter" and get a movie recommended by their choice.
 
 ### Screen Layouts
-<!-- >> Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.-->
+/*> Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.*/
 
-This is the layout of each of our screens ([here](https://lucid.app/lucidchart/a003f8a0-d5a4-4db0-b977-7398b10bc704/edit?beaconFlowId=7003D2A67BF28FE0&invitationId=inv_c3e23e90-8755-4936-a625-4f5f18f1564d&page=Z5eWzkaaxa7b#)).
+> This is the layout of each of our screens ([here](https://lucid.app/lucidchart/a003f8a0-d5a4-4db0-b977-7398b10bc704/edit?beaconFlowId=7003D2A67BF28FE0&invitationId=inv_c3e23e90-8755-4936-a625-4f5f18f1564d&page=Z5eWzkaaxa7b#)).
 
-Main menu: The user will first see the main menu. The two design modes we will use for this project are getting movie recommendations by selecting tags or entering a movie name. Users select the mode they want from the main menu.
+> Main menu: The user will first see the main menu. The two design modes we will use for this project are getting movie recommendations by selecting tags or entering a movie name. Users select the mode they want from the main menu.
 
-Tags search: Selecting tags mode will search for associated movies based on the tags selected by the user. This interface displays the user's existing search tags and is classified into genres, sub genres, directors, and actors. The interface also displays the current sorting criteria, including ratings and release dates, and remains the default values if it's not changed by the user. The user can choose to add different types of tags, change the sorting criteria, obtain a movie recommendation list based on existing tags, or return to the previous level.
+> Tags search: Selecting tags mode will search for associated movies based on the tags selected by the user. This interface displays the user's existing search tags and is classified into genres, sub genres, directors, and actors. The interface also displays the current sorting criteria, including ratings and release dates, and remains the default values if it's not changed by the user. The user can choose to add different types of tags, change the sorting criteria, obtain a movie recommendation list based on existing tags, or return to the previous level.
 
-Geners, Subgeners, Directors, Actors: These interfaces will display a list of tags of a certain type. The user can choose one to add.
+> Geners, Subgeners, Directors, Actors: These interfaces will display a list of tags of a certain type. The user can choose one to add.
 
-Sorting Condition: This interface will display different sorting criteria. The user can change the existing conditions to one of them.
+> Sorting Condition: This interface will display different sorting criteria. The user can change the existing conditions to one of them.
 
-Enter movie name: The entering a movie name model will search for associated movies based on the tags contained in the movie entered by the user. The user can enter the movie name on this interface.
+> Enter movie name: The entering a movie name model will search for associated movies based on the tags contained in the movie entered by the user. The user can enter the movie name on this interface.
 
-Movie name search: This interface displays the tags and current sorting criteria of the input movie. The user can choose to generate a movie recommendation list based on these tags and current sorting criteria, or they can choose to change the sorting criteria.
+> Movie name search: This interface displays the tags and current sorting criteria of the input movie. The user can choose to generate a movie recommendation list based on these tags and current sorting criteria, or they can choose to change the sorting criteria.
 
-Movie list: This interface displays a list of generated movie recommendations.
+> Movie list: This interface displays a list of generated movie recommendations.
 
 ## Class Diagram
  ![OMT Class Diagram](ImageFiles/Class_Diagram.png)
