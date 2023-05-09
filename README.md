@@ -54,7 +54,9 @@ In this project, movies will be sorted and categorized into their respective gen
 > Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
 
 ## Class Diagram
- > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
+ ![OMT Class Diagram](ImageFiles/Class_Diagram.png)
+
+ The diagram above shows the main classes that will be used in the program. As can be seen by the image, the main calling class will be the MovieMenu calss which wil call the recommender systems by action baseed on user input in the command prompt line. Following this we are planning on using a linked list to store our database of movies through the use of the class "movieList", which contains a Node and data which consists of a movie. The final class we currently plan to use is the Movie class which will hold all the information for each movie. For each movie extracted from the database there will be a title, genre, director, rating, and year of release to allow for sorting by these methods.
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
