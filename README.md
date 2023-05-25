@@ -55,7 +55,8 @@ The diagram above gives a basic guideline to our screen layout. From the menu, w
 ### Screen Layouts
 <!-- /*> Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.*/ -->
 
-This is the layout of each of our screens ([here](ImageFiles/Screen_Layouts.png)).
+This is the layout of each of our screens:
+![Screen Layouts](ImageFiles/Screen_Layouts.png)
 
 Main menu: The user will first see the main menu. The two design modes we will use for this project are getting movie recommendations by selecting tags or entering a movie name. Users select the mode they want from the main menu.
 
