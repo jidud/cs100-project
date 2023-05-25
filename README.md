@@ -61,7 +61,7 @@ Main menu: The user will first see the main menu. The two design modes we will u
 
 Tags search: Selecting tags mode will search for associated movies based on the tags selected by the user. This interface displays the user's existing search tags and is classified into genres, sub genres, directors, and actors. The interface also displays the current sorting criteria, including ratings and release dates, and remains the default values if it's not changed by the user. The user can choose to add different types of tags, change the sorting criteria, obtain a movie recommendation list based on existing tags, or return to the previous level.
 
-Geners, Subgeners, Directors, Actors: These interfaces will display a list of tags of a certain type. The user can choose one to add.
+Genres, Sub-genres, Directors, Actors: These interfaces will display a list of tags of a certain type. The user can choose one to add.
 
 Sorting Condition: This interface will display different sorting criteria. The user can change the existing conditions to one of them.
 
@@ -72,7 +72,7 @@ Movie name search: This interface displays the tags and current sorting criteria
 Movie list: This interface displays a list of generated movie recommendations.
 
 ## Class Diagram
- ![OMT Class Diagram](ImageFiles/Class_Diagram.png)
+ ![OMT Class Diagram](ImageFiles/Class_Diagram(2).png)
 
  The diagram above shows the main classes that will be used in the program. As can be seen by the image, the main calling class will be the MovieMenu calss which wil call the recommender systems by action baseed on user input in the command prompt line. Following this we are planning on using a linked list to store our database of movies through the use of the class "movieList", which contains a Node and data which consists of a movie. The final class we currently plan to use is the Movie class which will hold all the information for each movie. For each movie extracted from the database there will be a title, genre, director, rating, and year of release to allow for sorting by these methods.
  
