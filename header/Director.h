@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-class Year {
+class Director {
     private:
         string directorName;
     public:
