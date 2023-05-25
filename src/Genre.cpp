@@ -1,14 +1,14 @@
-#include "Director.h"
+#include "Genre.h"
 
-void Director::setDirector(int name) {
-	directorName = name;
+void Genre::setGenre(int name) {
+	genreName = name;
 }
 
-int Director::getDirector() {
-	return directorName;
+int Genre::getGenre() {
+	return genreName;
 }
 
-void Director::sortByDirector(vector<Movie*>* movieList) {
+void Genre::sortByGenre(vector<Movie*>* movieList) {
 	int i = 0;
 	int j = 0;
 	int indexSmallest = 0;
@@ -17,7 +17,7 @@ void Director::sortByDirector(vector<Movie*>* movieList) {
 		// Find index of smallest remaining element
 		indexSmallest = 1;
 		for (j = i + 1; j < movieList->size(); ++j) {
-			if (movieList->at(j)->getDirector() < movieList->at(indexSmallest)->getDirector()) {
+			if (movieList->at(j)->getGenre() < movieList->at(indexSmallest)->getGenre()) {
 				indexSmallest = j;
 			}
 		}
