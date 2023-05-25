@@ -72,7 +72,7 @@ Movie name search: This interface displays the tags and current sorting criteria
 Movie list: This interface displays a list of generated movie recommendations.
 
 ## Class Diagram
- ![OMT Class Diagram](ImageFiles/Class_Diagram(2).png)
+ ![OMT Class Diagram](ImageFiles/Class_Diagram.png)
 
  The diagram above shows the main classes that will be used in the program. As can be seen by the image, the main calling class will be the MovieMenu calss which wil call the recommender systems by action baseed on user input in the command prompt line. Following this we are planning on using a linked list to store our database of movies through the use of the class "movieList", which contains a Node and data which consists of a movie. The final class we currently plan to use is the Movie class which will hold all the information for each movie. For each movie extracted from the database there will be a title, genre, director, rating, and year of release to allow for sorting by these methods.
  
