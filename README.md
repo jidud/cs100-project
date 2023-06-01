@@ -76,6 +76,9 @@ Movie list: This interface displays a list of generated movie recommendations.
  ![OMT Class Diagram](ImageFiles/Class_Diagram_2.png)
 
  The diagram above shows the main classes that will be used in the program. As can be seen by the image, the main calling class will be the MovieMenu class which wil call the recommender systems by action baseed on user input in the command prompt line. Following this we are planning on using a linked list to store our database of movies through the use of the class "movieList", which contains a Node and data which consists of a movie. We will also have five derived classes, Title, Genre, Director, Year, and Rating. In these classes we will get each of its input, set it, and will sort it.
+ 
+ SOLID - We used the Single Responsibility Principle(SRP). Originally, in our class diagram, title, genre, director, year, and rating were all in one class, but we changed it so that each action can do its own thing, so they are all made into its own single class. This allowed us to make our code more simpler and it is now easier to keep track of errors.
+
  Database - We are going to have a file that stores a list of movies with its genre, title, rating, director, and year. This file will be used as a database that gives us our output.
  
  > ## Phase III
