@@ -7,7 +7,10 @@ void displayMainMenu();
 void displayTagsSearch();
 
 int main() {
+
 	displayMainMenu();
+
+	return 0;
 }
 
 
@@ -46,7 +49,7 @@ void displayTagsSearch() {
 
 	cout << "Current Movie Tags:" << endl;
 	cout << endl;
-	cout << "Geners and Subgeners: " << endl;
+	cout << "Genres and Subgenres: " << endl;
 	cout << "Directors: " << endl;
 	cout << "Actors: " << endl;
 	cout << endl;
@@ -58,7 +61,7 @@ void displayTagsSearch() {
 	cout << endl;
 
 	cout << "Options:" << endl;
-	cout << "1. Add a tag on geners or subgeners" << endl;
+	cout << "1. Add a tag on genres or subgenres" << endl;
 	cout << "2. Add a tag on directors" << endl;
 	cout << "3. Add a tag on actors" << endl;
 	cout << "4. Change the sorting Criteria" << endl;

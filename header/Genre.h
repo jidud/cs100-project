@@ -1,6 +1,7 @@
 #ifndef GENRE_H
 #define GENRE_H
 #include <vector>
+#include <string>
 using namespace std;
 
 class Genre {
