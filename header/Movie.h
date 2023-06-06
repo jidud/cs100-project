@@ -19,6 +19,6 @@ class Movie {
         Rating movieRating;
 
         Movie(string title, vector<string> genres, string directorName, int releaseYear, double rating);
-}
+};
 
 #endif

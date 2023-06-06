@@ -1,4 +1,5 @@
-#include "Genre.h"
+#include "../header/Genre.h"
+#include "../header/Movie.h"
 
 void Genre::setGenres(vector<string> names) {
 	genreNames = names;

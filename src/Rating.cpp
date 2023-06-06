@@ -1,10 +1,11 @@
-#include "Rating.h"
+#include "../header/Rating.h"
+#include "../header/Movie.h"
 
 void Rating::setRating(double _rating) {
 	rating = _rating;
 }
 
-int Rating::getRating() {
+double Rating::getRating() {
 	return rating;
 }
 
@@ -17,7 +18,7 @@ void Rating::sortByRating(vector<Movie*>* movieList) {
 		// Find index of smallest remaining element
 		indexSmallest = 1;
 		for (j = i + 1; j < movieList->size(); ++j) {
-			if (movieList->at(j)->getRating() < movieList->at(indexSmallest)->getRating()) {
+			if (movieList->at(j).getRating() < movieList->at(indexSmallest).getRating()) {
 				indexSmallest = j;
 			}
 		}

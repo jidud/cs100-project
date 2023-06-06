@@ -12,7 +12,7 @@ class Title {
     public:
         void setTitle(string movieTitle);
         string getTitle();
-        void sortByTitle();
+        void sortByTitle(vector<Movie*>*);
 
 };
 
