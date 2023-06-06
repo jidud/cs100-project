@@ -12,19 +12,19 @@ void MovieList::parseData(string filename) {
     ifstream infile;
     infile.open(filename);
 
-    string movieTitle = "";
-    string genre = "";
-    vector<string> genres;
-    string director = "";
-    string year = "";
-    string rating = "";
-
     if(!infile.is_open()) {
         cout << "Error opeing file: " << filename << endl;
         return;
     }
 
     while(getline(infile, line)) {
+        string movieTitle = "";
+        string genre = "";
+        vector<string> genres;
+        string director = "";
+        string year = "";
+        string rating = "";
+        
         int i = 0;
         //get movie title
         while(line[i] != ',') {
