@@ -27,6 +27,12 @@ void MovieList::parseData(string filename) {
     }
 
     while(getline(infile, line)) {
+        movieTitle = "";
+        genre = "";
+        director = "";
+        year = "";
+        rating = "";
+        
         int i = 0;
         //get movie title
         while(line[i] != ',') {
@@ -95,6 +101,9 @@ void MovieList::sortByTitle(string title) {
             swap(movieList[count], (movieList[i]));
             count++;
         }
+        if(count >= 5) {
+            break;
+        }
     }
     printFive();
 }
@@ -109,6 +118,9 @@ void MovieList::sortByGenre(string genre) {
                 count++;
             }
         }
+        if(count >= 5) {
+            break;
+        }
     }
     printFive();
 }
@@ -120,6 +132,9 @@ void MovieList::sortByDirector(string director) {
         if(movieList[i].movieDirector.getDirector().contains(director) && count < 5) {
             swap(movieList[count], (movieList[i]));
             count++;
+        }
+        if(count >= 5) {
+            break;
         }
     }
     printFive();
@@ -134,6 +149,9 @@ void MovieList::sortByReleaseYear(int year) {
             swap(movieList[count], (movieList[i]));
             count++;
         }
+        if(count >= 5) {
+            break;
+        }
     }
     printFive();
 }
@@ -146,6 +164,9 @@ void MovieList::sortByRating(double rating) {
         if(movieList[i].movieRating.getRating() == rating && count < 5) {
             swap(movieList[count], (movieList[i]));
             count++;
+        }
+        if(count >= 5) {
+            break;
         }
     }
     printFive();
