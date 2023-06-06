@@ -8,7 +8,7 @@ class Genre {
         vector<string> genreNames;
     public:
         void setGenres(vector<string> names);
-        int getGenres();
+        vector<string> getGenres();
         void sortByGenre();
 };
 
