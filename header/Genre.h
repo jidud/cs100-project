@@ -5,10 +5,10 @@ using namespace std;
 
 class Genre {
     private:
-        string genreName;
+        vector<string> genreNames;
     public:
-        void setGenre(string name);
-        int getGenre();
+        void setGenres(vector<string> names);
+        int getGenres();
         void sortByGenre();
 };
 

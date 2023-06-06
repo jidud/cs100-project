@@ -1,26 +1,15 @@
 #include "Genre.h"
 
-void Genre::setGenre(int name) {
-	genreName = name;
+void Genre::setGenre(vector<string> names) {
+	genreNames = names;
 }
 
-int Genre::getGenre() {
-	return genreName;
+int Genre::getGenres() {
+	return genreNames;
 }
 
+//find same genres
 void Genre::sortByGenre(vector<Movie*>* movieList) {
 	int i = 0;
 	int j = 0;
-	int indexSmallest = 0;
-
-	for (i = 0; i < movieList->size() - 1; ++i) {
-		// Find index of smallest remaining element
-		indexSmallest = 1;
-		for (j = i + 1; j < movieList->size(); ++j) {
-			if (movieList->at(j)->getGenre() < movieList->at(indexSmallest)->getGenre()) {
-				indexSmallest = j;
-			}
-		}
-		swap(movieList->at(i), movieList->at(indexSmallest));
-	}
 }
