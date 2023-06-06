@@ -1,10 +1,10 @@
 #include "Genre.h"
 
-void Genre::setGenre(vector<string> names) {
+void Genre::setGenres(vector<string> names) {
 	genreNames = names;
 }
 
-int Genre::getGenres() {
+vector<string> Genre::getGenres() {
 	return genreNames;
 }
 
