@@ -12,7 +12,7 @@ private:
 
 public:
 	void setReleaseYear(int _releaseYear);
-	int getRating();
+	int getReleaseYear();
 	void sortByReleaseYear();
 };
 #endif
