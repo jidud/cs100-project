@@ -17,5 +17,6 @@ private:
 public:
 	void displayMainMenu();
 	void displayTagsSearch(Tag* tag1);
+	void displayAllGeners(const vector<string>& allGeners);
 };
 #endif

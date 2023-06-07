@@ -39,3 +39,15 @@ void Display::displayTagsSearch(Tag* tag1) {
 
 	cout << "Please enter a number to select an option:" << endl;
 }
+
+void Display::displayAllGeners(const vector<string>& allGeners) {
+	cout << "Geners and Subgeners" << endl;
+	cout << endl;
+
+	for (unsigned int i = 0; i < allGeners.size(); ++i) {
+		cout << (i + 1) << ". " << allGeners.at(i) << endl;
+	}
+	cout << endl;
+
+	cout << "Please enter a number to select a gener:" << endl;
+}
