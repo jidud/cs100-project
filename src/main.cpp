@@ -3,18 +3,22 @@
 #include <vector>
 
 #include "../header/Display.h"
+#include "../header/Tag.h"
 
 using namespace std;
+
+void enterMovieName(string& userMovieName);
 
 int main() {
 	vector<string> allGeners = { "g1", "g2", "g3"};
 	Display menu1;
 	string userOption = "";
+	Tag tag1;
 	string userMovieName = "";
 	string ans = "1";
 
 	menu1.displayMainMenu();
-	
+		
 	getline(cin, userOption);
 
 	if (userOption ==  "1") {
@@ -52,7 +56,7 @@ int main() {
 		}
 	}
 	else if (userOption == "2") {
-		//enterMovieName(userMovieName);
+		enterMovieName(userMovieName);
 	}
 	else if (userOption == "3") {
 		return 0;
@@ -62,4 +66,10 @@ int main() {
 	}
 
 	return 0;
+}
+
+void enterMovieName(string& userMovieName) {
+	cout << "Please enter a movie name:" << endl;
+	getline(cin, userMovieName);
+	//cout << userMovieName;
 }
