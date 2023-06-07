@@ -16,5 +16,6 @@ private:
 
 public:
 	void displayMainMenu();
+	void displayTagsSearch(Tag* tag1);
 };
 #endif
