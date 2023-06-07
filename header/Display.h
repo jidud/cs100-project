@@ -10,15 +10,13 @@
 using namespace std;
 
 class Display {
+	private:
 
-private:
-
-
-public:
-	void displayMainMenu();
-	void displayTagsSearch(Tag* tag1);
-	void displayAllGeners(const vector<string>& allGeners);
-	void displayAllDirectors(const vector<string>& allDirectors);
-	void displayAllActor(const vector<string>& allActors);
+	public:
+		void displayMainMenu();
+		void displayTagsSearch(Tag* tag1);
+		void displayAllGeners(const vector<string>& allGeners);
+		void displayAllDirectors(const vector<string>& allDirectors);
+		void displayAllActor(const vector<string>& allActors);
 };
 #endif

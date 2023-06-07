@@ -8,14 +8,16 @@
 using namespace std;
 
 class Tag {
+	private:
+		vector<string> tagGener;
+		vector<string> tagDirector;
+		vector<string> tagActor;
 
-private:
-	vector<string> tagGener;
-
-public:
-	void addTagGener(const string& newTagGener);
-	void displayTagGener();
-	void addTagDirector(const string& newTagDirector);
-	void displayTagDirector();
+	public:
+		void addTagGener(const string& newTagGener);
+		void displayTagGener();
+		void addTagDirector(const string& newTagDirector);
+		void displayTagDirector();
+		void addTagActor(const string& newTagActor);
 };
 #endif
