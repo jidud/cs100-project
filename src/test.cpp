@@ -1,4 +1,5 @@
-#include <gtest/gtest.h>
+
+#include "gtest/gtest.h"
 #include "../header/Genre.h"
 #include "../header/MovieList.h"
 
@@ -36,4 +37,29 @@ TEST(GenreTest, SortByGenre) {
     // Check if the movies are sorted correctly
     EXPECT_EQ(movieList[0]->getTitle(), "Guardians of the Galaxy");
     EXPECT_EQ(movieList[1]->getTitle(), "Suicide Squad");
+}
+
+/*---------------------------Tests for Director.cpp---------------------------*/
+
+TEST (DirectorTest, SetDirector) {
+    string testName = "Shelby Mitsuko";
+    director.setDirector(testName);
+    EXPECT_EQ(director.getDirector(), testName);
+}
+
+/*---------------------------------------------------------------------------*/
+
+/*--------------------------Tests for MovieList.cpp--------------------------*/
+
+//test parseData()
+TEST (MovieListTest, ParseData) {
+    movieList.parseData("movieData.csv");
+    
+}
+
+/*---------------------------------------------------------------------------*/
+
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }
