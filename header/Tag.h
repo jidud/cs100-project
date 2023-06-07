@@ -15,5 +15,6 @@ private:
 public:
 	void addTagGener(const string& newTagGener);
 	void displayTagGener();
+	void addTagDirector(const string& newTagDirector);
 };
 #endif
