@@ -19,6 +19,7 @@ void Display::displayTagsSearch(Tag* tag1) {
 	cout << "Geners and Subgeners: " << endl;
 	tag1->displayTagGener();
 	cout << "Directors: " << endl;
+	tag1->displayTagDirector();
 	cout << "Actors: " << endl;
 	cout << endl;
 
@@ -50,4 +51,16 @@ void Display::displayAllGeners(const vector<string>& allGeners) {
 	cout << endl;
 
 	cout << "Please enter a number to select a gener:" << endl;
+}
+
+void Display::displayAllDirectors(const vector<string>& allDirectors) {
+	cout << "Directors" << endl;
+	cout << endl;
+
+	for (unsigned int i = 0; i < allDirectors.size(); ++i) {
+		cout << (i + 1) << ". " << allDirectors.at(i) << endl;
+	}
+	cout << endl;
+
+	cout << "Please enter a number to select a director:" << endl;
 }
