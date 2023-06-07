@@ -12,7 +12,7 @@ private:
 
 public:
 	void setRating(double _rating);
-	int getRating();
-	void sortByRating();
+	double getRating();
+	void sortByRating(vector<Movie*>*);
 };
 #endif

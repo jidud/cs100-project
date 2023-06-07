@@ -9,7 +9,7 @@ class Director {
     public:
         void setDirector(string name);
         string getDirector();
-        void sortByDirector();
+        void sortByDirector(vector<Movie*>*);
 };
 
 #endif

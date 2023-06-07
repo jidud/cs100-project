@@ -1,4 +1,5 @@
-#include "Title.h"
+#include "../header/Title.h"
+#include "../header/Movie.h"
 
 void Title::setTitle(string movieTitle) {
     movieTitle = title;

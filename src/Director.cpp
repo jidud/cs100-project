@@ -1,6 +1,7 @@
-#include "Director.h"
+#include "../header/Director.h"
+#include "../header/Movie.h"
 
-void Director::setDirector(int name) {
+void Director::setDirector(string name) {
 	directorName = name;
 }
 

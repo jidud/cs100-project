@@ -13,6 +13,6 @@ private:
 public:
 	void setReleaseYear(int _releaseYear);
 	int getReleaseYear();
-	void sortByReleaseYear();
+	void sortByReleaseYear(vector<Movie*>*);
 };
 #endif

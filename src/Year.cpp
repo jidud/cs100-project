@@ -1,4 +1,5 @@
-#include "Year.h"
+#include "../header/Year.h"
+#include "../header/Movie.h"
 
 void Year::setReleaseYear(int _releaseYear) {
 	releaseYear = _releaseYear;
@@ -17,7 +18,7 @@ void Year::sortByReleaseYear(vector<Movie*>* movieList) {
 		// Find index of smallest remaining element
 		indexSmallest = 1;
 		for (j = i + 1; j < movieList->size(); ++j) {
-			if (movieList->at(j)->getReleaseYear() < movieList->at(indexSmallest)->getReleaseYear()) {
+			if (movieList->at(j).getReleaseYear() < movieList->at(indexSmallest).getReleaseYear()) {
 				indexSmallest = j;
 			}
 		}
