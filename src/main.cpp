@@ -12,6 +12,7 @@ void enterMovieName(string& userMovieName);
 int main() {
 	vector<string> allGeners = { "g1", "g2", "g3"};
 	vector<string> allDirectors = { "d1", "d2", "d3" };
+	vector<string> allActors = { "a1", "a2", "a3" };
 	Display menu1;
 	string userOption = "";
 	Tag tag1;
@@ -19,6 +20,7 @@ int main() {
 	string ans = "1";
 
 	menu1.displayMainMenu();
+	
 	
 	getline(cin, userOption);
 
@@ -45,6 +47,12 @@ int main() {
 				tag1.addTagDirector(newTagDirector);
 			}
 			else if (userOption == "3") {
+				menu1.displayAllActor(allActors);
+
+				getline(cin, userOption);
+				string newTagActor = allActors.at(stoi(userOption) - 1);
+
+				tag1.addTagActor(newTagActor);
 				//addTagActor();
 			}
 			else if (userOption == "4") {
