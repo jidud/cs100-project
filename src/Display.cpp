@@ -64,3 +64,15 @@ void Display::displayAllDirectors(const vector<string>& allDirectors) {
 
 	cout << "Please enter a number to select a director:" << endl;
 }
+
+void Display::displayAllActor(const vector<string>& allActors) {
+	cout << "Actors" << endl;
+	cout << endl;
+
+	for (unsigned int i = 0; i < allActors.size(); ++i) {
+		cout << (i + 1) << ". " << allActors.at(i) << endl;
+	}
+	cout << endl;
+
+	cout << "Please enter a number to select a actor:" << endl;
+}

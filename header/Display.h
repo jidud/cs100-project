@@ -19,5 +19,6 @@ public:
 	void displayTagsSearch(Tag* tag1);
 	void displayAllGeners(const vector<string>& allGeners);
 	void displayAllDirectors(const vector<string>& allDirectors);
+	void displayAllActor(const vector<string>& allActors);
 };
 #endif
