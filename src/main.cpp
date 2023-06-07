@@ -1,97 +1,65 @@
 #include <iostream>
 #include <string>
+#include <vector>
+
+#include "Display.h"
 
 using namespace std;
 
-void displayMainMenu();
-void displayTagsSearch();
-
 int main() {
+	vector<string> allGeners = { "g1", "g2", "g3"};
+	Display menu1;
+	string userOption = "";
+	string userMovieName = "";
+	string ans = "1";
 
-	displayMainMenu();
+	menu1.displayMainMenu();
+	
+	getline(cin, userOption);
+
+	if (userOption ==  "1") {
+		while (ans != "6") {
+			menu1.displayTagsSearch(&tag1);
+
+			getline(cin, userOption);
+
+			if (userOption == "1") {
+				menu1.displayAllGeners(allGeners);
+
+				getline(cin, userOption);
+				string newTagGener = allGeners.at(stoi(userOption) - 1);
+
+				tag1.addTagGener(newTagGener);
+			}
+			else if (userOption == "2") {
+				//addTagDirector();
+			}
+			else if (userOption == "3") {
+				//addTagActor();
+			}
+			else if (userOption == "4") {
+				//displaySortingCriteria();
+			}
+			else if (userOption == "5") {
+				//displayRecommendationMovieList();
+			}
+			else if (userOption == "6") {
+				return 0;
+			}
+			else {
+				return 0;
+			}
+		}
+	}
+	else if (userOption == "2") {
+		//enterMovieName(userMovieName);
+	}
+	else if (userOption == "3") {
+		return 0;
+	}
+	else {
+		return 0;
+	}
 
 	return 0;
-}
-
-
-void displayMainMenu() {
-	string option = "";
-
-	cout << "Movie Recommender" << endl;
-	cout << endl;
-
-	cout << "Options:" << endl;
-	cout << "1. Get movie recommendations based on tags (such as genres)" << endl;
-	cout << "2. Get movie recommendations based on a movie name" << endl;
-	cout << "3. Quit program" << endl;
-	cout << endl;
-
-	cout << "Please enter a number to select an option:" << endl;
-
-	cin >> option;
-
-	if (option == "1") {
-		displayTagsSearch();
-	}
-	else if (option == "2") {
-		enterMovieName();
-	}
-	else if (option == "3") {
-		return;
-	}
-	else {
-		return;
-	}
-}
-
-void displayTagsSearch() {
-	string option = "";
-
-	cout << "Current Movie Tags:" << endl;
-	cout << endl;
-	cout << "Genres and Subgenres: " << endl;
-	cout << "Directors: " << endl;
-	cout << "Actors: " << endl;
-	cout << endl;
-
-	cout << "Current Sorting Criteria:" << endl;
-	cout << endl;
-	cout << "Rating: " << endl;
-	cout << "Release date: " << endl;
-	cout << endl;
-
-	cout << "Options:" << endl;
-	cout << "1. Add a tag on genres or subgenres" << endl;
-	cout << "2. Add a tag on directors" << endl;
-	cout << "3. Add a tag on actors" << endl;
-	cout << "4. Change the sorting Criteria" << endl;
-	cout << "5. Get a movie recommendation list" << endl;
-	cout << "6. Go back" << endl;
-	cout << endl;
-
-	cout << "Please enter a number to select an option:" << endl;
-
-	cin >> option;
-
-	if (option == "1") {
-		displayTagsSearch();
-	}
-	else if (option == "2") {
-		addTagGener();
-	}
-	else if (option == "3") {
-		addTagDirector();
-	}
-	else if (option == "4") {
-		displaySortingCriteria();
-	}
-	else if (option == "5") {
-		displayRecommendationMovieList();
-	}
-	else if (option == "6") {
-		return;
-	}
-	else {
-		return;
-	}
 }
