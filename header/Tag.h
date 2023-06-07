@@ -19,5 +19,6 @@ class Tag {
 		void addTagDirector(const string& newTagDirector);
 		void displayTagDirector();
 		void addTagActor(const string& newTagActor);
+		void displayTagActor();
 };
 #endif
