@@ -144,7 +144,7 @@ void MovieList::sortByReleaseYear(int year) {
     int count = 0;
 
     for(int i = 0; i < movieList.size(); ++i) {
-        //contain does not work it int/double
+        //contain does not work with int/double
         if(movieList[i].movieYear.getReleaseYear() == year && count < 5) {
             swap(movieList[count], (movieList[i]));
             count++;
@@ -160,7 +160,7 @@ void MovieList::sortByRating(double rating) {
     int count = 0;
 
     for(int i = 0; i < movieList.size(); ++i) {
-        //contain does not work it int/double
+        //contain does not work with int/double
         if(movieList[i].movieRating.getRating() == rating && count < 5) {
             swap(movieList[count], (movieList[i]));
             count++;
