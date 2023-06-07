@@ -15,3 +15,9 @@ void Tag::displayTagGener() {
 void Tag::addTagDirector(const string& newTagDirector) {
 	tagDirector.push_back(newTagDirector);
 }
+
+void Tag::displayTagDirector() {
+	for (unsigned int i = 0; i < tagDirector.size(); ++i) {
+		cout << (i + 1) << ". " << tagDirector.at(i) << endl;
+	}
+}
