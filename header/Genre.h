@@ -1,8 +1,11 @@
 #ifndef GENRE_H
 #define GENRE_H
+#include "../header/Movie.h"
 #include <vector>
 #include <string>
 using namespace std;
+
+class Movie;
 
 class Genre {
     private:

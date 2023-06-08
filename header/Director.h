@@ -1,7 +1,11 @@
 #ifndef DIRECTOR_H
 #define DIRECTOR_H
 #include <vector>
+#include "../header/Movie.h"
+
 using namespace std;
+
+class Movie;
 
 class Director {
     private:

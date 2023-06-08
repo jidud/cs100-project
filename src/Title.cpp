@@ -2,7 +2,7 @@
 #include "../header/Movie.h"
 
 void Title::setTitle(string movieTitle) {
-    movieTitle = title;
+    title = movieTitle;
 }
 
 string Title::getTitle() {

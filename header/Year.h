@@ -2,8 +2,11 @@
 #define YEAR_H
 
 #include <vector>
+#include "../header/Movie.h"
 
 using namespace std;
+
+class Movie;
 
 class Year {
 

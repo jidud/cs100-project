@@ -1,6 +1,7 @@
 #include "../header/Genre.h"
 #include "../header/Movie.h"
 
+
 void Genre::setGenres(vector<string> names) {
 	genreNames = names;
 }
@@ -13,4 +14,5 @@ vector<string> Genre::getGenres() {
 void Genre::sortByGenre(vector<Movie*>* movieList) {
 	int i = 0;
 	int j = 0;
+
 }

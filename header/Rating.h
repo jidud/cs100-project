@@ -2,8 +2,11 @@
 #define Rating_H
 
 #include <vector>
+#include "../header/Movie.h"
 
 using namespace std;
+
+class Movie;
 
 class Rating {
 
