@@ -53,10 +53,12 @@ int main() {
 				string newTagActor = allActors.at(stoi(userOption) - 1);
 
 				tag1.addTagActor(newTagActor);
-				//addTagActor();
 			}
 			else if (userOption == "4") {
-				//displaySortingCriteria();
+				menu1.displaySortingCriteria();
+				getline(cin, userOption);
+				
+				tag1.changeSortingCriteria(userOption);
 			}
 			else if (userOption == "5") {
 				//displayRecommendationMovieList();
