@@ -2,8 +2,10 @@
 #define MOVIELIST_H
 
 #include <iostream>
-#include "../header/Movie.h"
+#include <vector>
 using namespace std; 
+
+class Movie;
 
 class MovieList {
     private:

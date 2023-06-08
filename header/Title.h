@@ -1,9 +1,12 @@
 #ifndef TITLE_H
 #define TITLE_H
+#include "../header/Movie.h"
 #include <vector>
 #include <string>
 
 using namespace std;
+
+class Movie;
 
 class Title {
     private:
