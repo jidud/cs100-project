@@ -46,3 +46,7 @@ void Tag::changeSortingCriteria(const string& userOption) {
 		isHighToLow = false;
 	}
 }
+
+bool Tag::getTagRating() {
+	return isHighToLow;
+}

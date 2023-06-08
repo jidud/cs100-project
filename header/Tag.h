@@ -21,5 +21,6 @@ class Tag {
 		void addTagActor(const string& newTagActor);
 		void displayTagActor();
 		void changeSortingCriteria(const string& userOption);
+		bool getTagRating();
 };
 #endif
