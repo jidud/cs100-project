@@ -10,6 +10,7 @@ vector<string> Genre::getGenres() {
 	return genreNames;
 }
 
+
 //find same genres
 void Genre::sortByGenre(vector<Movie*>* movieList) {
 	int i = 0;
