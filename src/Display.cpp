@@ -21,12 +21,25 @@ void Display::displayTagsSearch(Tag* tag1) {
 	cout << "Directors: " << endl;
 	tag1->displayTagDirector();
 	cout << "Actors: " << endl;
+	tag1->displayTagActor();
 	cout << endl;
 
 	cout << "Current Sorting Criteria:" << endl;
 	cout << endl;
 	cout << "Rating: " << endl;
+	if (tag1->getTagRating() == true) {
+		cout << "From high to low" << endl;
+	}
+	else {
+		cout << "From low to high" << endl;
+	}
 	cout << "Release date: " << endl;
+	if (tag1->getTagDate() == true) {
+		cout << "From new to old" << endl;
+	}
+	else {
+		cout << "From old to new" << endl;
+	}
 	cout << endl;
 
 	cout << "Options:" << endl;
@@ -75,4 +88,27 @@ void Display::displayAllActor(const vector<string>& allActors) {
 	cout << endl;
 
 	cout << "Please enter a number to select a actor:" << endl;
+}
+
+void Display::displaySortingCriteria() {
+	cout << "Sorting Criteria:" << endl;
+	cout << endl;
+
+	cout << "Current Sorting Criteria:" << endl;
+	cout << endl;
+	cout << "Rating: " << endl;
+	cout << "Release date: " << endl;
+	cout << endl;
+
+	cout << "By rating:" << endl;
+	cout << "1. From high to low: " << endl;
+	cout << "2. From low to high: " << endl;
+	cout << endl;
+
+	cout << "By release date:" << endl;
+	cout << "3. From new to old" << endl;
+	cout << "4. From old to new" << endl;
+	cout << endl;
+
+	cout << "Please enter a number to select an option:" << endl;
 }
