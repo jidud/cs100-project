@@ -20,5 +20,6 @@ class Tag {
 		void displayTagDirector();
 		void addTagActor(const string& newTagActor);
 		void displayTagActor();
+		void changeSortingCriteria(const string& userOption);
 };
 #endif

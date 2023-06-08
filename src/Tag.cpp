@@ -31,3 +31,18 @@ void Tag::displayTagActor() {
 		cout << (i + 1) << ". " << tagActor.at(i) << endl;
 	}
 }
+
+void Tag::changeSortingCriteria(const string& userOption) {
+	if (userOption == "1") {
+		isHighToLow = true;
+	}
+	else if (userOption == "2") {
+		isHighToLow = false;
+	}
+	else if (userOption == "3") {
+		isHighToLow = true;
+	}
+	else if (userOption == "4") {
+		isHighToLow = false;
+	}
+}
