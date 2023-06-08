@@ -5,8 +5,6 @@
 #include <vector>
 using namespace std; 
 
-class Movie;
-
 class MovieList {
     private:
         vector<Movie> movieList;

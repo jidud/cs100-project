@@ -17,31 +17,14 @@ TEST(GenreTest, SetandGetGenre) {
 }
 
 //Testing SortByGenre()
-// TEST(GenreTest, SortByGenre) {
-//     Genre genre;
-//     vector<Movie*> movieList;
+TEST(GenreTest, SortByGenre) {
+    MovieList ml;
 
-//     // Create some movies with different genres
-//     Movie movie1("Guardians of the Galaxy", {"Action", "Adventure", "Sci-Fi"}, "James Gunn", 2014, 8.1);
-//     Movie movie2("Prometheus", {"Adventure", "Mystery", "Sci-Fi"}, "Ridley Scott", 2012, 7.0);
-//     Movie movie3("Split", {"Horror", "Thriller"}, "M. Night Shyamalan", 2016, 7.3);
-//     Movie movie4("Sing", {"Animation", "Comedy", "Family"}, "Christophe Lourdelet", 2016, 7.2);
-//     Movie movie5("Suicide Squad", {"Action", "Adventure", "Fantasy"}, "David Ayer", 2016, 6.2);
+    ml.sortByGenre("Action");
 
-//     // Add movies to the movieList
-//     movieList.push_back(&movie1);
-//     movieList.push_back(&movie2);
-//     movieList.push_back(&movie3);
-//     movieList.push_back(&movie4);
-//     movieList.push_back(&movie5);
+    ml.printFive();
+}
 
-//     //Sorting movies by Action
-//     genre.sortByGenre(&movieList);
-
-//     // Check if the movies are sorted correctly
-//     EXPECT_EQ(movieList[0]->movieTitle.getTitle(), "Guardians of the Galaxy");
-//     EXPECT_EQ(movieList[1]->movieTitle.getTitle(), "Suicide Squad");
-// }
 
 // /*---------------------------Tests for Director.cpp---------------------------*/
 
@@ -50,6 +33,17 @@ TEST (DirectorTest, SetDirector) {
     Director director;
     director.setDirector(testName);
     EXPECT_EQ(director.getDirector(), testName);
+}
+
+//test sortByDirector
+TEST(TitleTest, SortDirector) {
+    MovieList movieList;
+
+    // Sorts by genre
+    movieList.sortByDirector("John");
+
+    // Print the sorted movies
+    movieList.printFive();
 }
 
 // /*---------------------------------------------------------------------------*/
@@ -61,25 +55,16 @@ TEST(TitleTest, SetandGetTitle) {
     EXPECT_EQ(title.getTitle(), "Ironman");
 }
 
-// //test SortByTitle()
-// TEST(TitleTest, SortTitle) {
-//     MovieList ml;
+//test SortByTitle()
+TEST(TitleTest, SortTitle) {
+    MovieList movieList;
 
-//     Movie movie1("The Great Wall", {"g1"}, "d1", 2021, 1.0);
-//     Movie movie2("Their Finest", {"g2"}, "d2", 2022, 2.0);
-//     Movie movie3("The Lost City of Z", {"g3"}, "d3", 2023, 3.0);
+    // Sorts by genre
+    movieList.sortByTitle("The");
 
-//     //add movies
-//     ml.addMovie(movie1);
-//     ml.addMovie(movie2);
-//     ml.addMovie(movie3);
-
-//     //sort
-//     ml.sortByTitle("The");
-
-//     EXPECT_EQ(ml[0].getTitle(), "The Great Wall");
-//     EXPECT_EQ(ml[1].getTitle(), "The Lost City of Z");
-// }
+    // Print the sorted movies
+    movieList.printFive();
+}
 
 /*---------------------------------------------------------------------------*/
 //test for set and get rating
@@ -91,24 +76,14 @@ TEST(RatingTest, SetandGetRating){
 }
 
 // //test for sortByRating
-// TEST(RatingTest, SortByRating) {
-//     Rating rating;
-//     vector<Movie*> ml;
+TEST(RatingTest, SortByRating) {
+    MovieList ml;
 
-//     Movie movie1("Guardians of the Galaxy", {"Action", "Adventure", "Sci-Fi"}, "James Gunn", 2014, 8.1);
-//     Movie movie2("Prometheus", {"Adventure", "Mystery", "Sci-Fi"}, "Ridley Scott", 2012, 7.0);
-//     Movie movie3("Split", {"Horror", "Thriller"}, "M. Night Shyamalan", 2016, 7.3);
+    ml.sortByRating(7.0);
 
-//     ml.push_back(movie1);
-//     ml.push_back(movie2);
-//     ml.push_back(movie3);
+    ml.printFive();
 
-//     rating.sortByRating(&ml);
-
-//     EXPECT_EQ(ml[0]->getTitle(), "Guardians of the Galaxy");
-//     EXPECT_EQ(ml[1]->getTitle(), "Split");
-//     EXPECT_EQ(ml[2]->getTitle(), "Prometheus");
-// }
+}
 
 /*---------------------------------------------------------------------------*/
 //test for set and get year
@@ -119,26 +94,14 @@ TEST(YearTest, SetandGetYear) {
     EXPECT_TRUE(year.getReleaseYear() == 2023);
 }
 
-// //test for sortByYear
-// TEST(YearTest, SortByYear) {
-//     Year year;
-//     MovieList ml;
+//test for sortByYear
+TEST(YearTest, SortByYear) {
+    MovieList ml;
 
-//     Movie movie1("Guardians of the Galaxy", {"Action", "Adventure", "Sci-Fi"}, "James Gunn", 2014, 8.1);
-//     Movie movie2("Prometheus", {"Adventure", "Mystery", "Sci-Fi"}, "Ridley Scott", 2012, 7.0);
-//     Movie movie3("Split", {"Horror", "Thriller"}, "M. Night Shyamalan", 2016, 7.3);
+    ml.sortByReleaseYear(2020);
 
-//     ml.addMovie(movie1);
-//     ml.addMovie(movie2);
-//     ml.addMovie(movie3);
-
-//     ml.sortByReleaseYear(2012);
-
-//     EXPECT_EQ(ml[0].getReleaseYear(), 2012);
-//     EXPECT_EQ(ml[1].getReleaseYear(), 2014);
-//     EXPECT_EQ(ml[2].getReleaseYear(), 2016);
-// }
-
+    ml.printFive();
+}
 
 // /*--------------------------Tests for MovieList.cpp--------------------------*/
 

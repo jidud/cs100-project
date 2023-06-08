@@ -10,6 +10,8 @@ add_executable(runAllTests
   src/Title.cpp
   src/Rating.cpp
   src/Year.cpp
+  src/MovieList.cpp
+
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)
