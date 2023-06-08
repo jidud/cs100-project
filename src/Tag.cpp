@@ -50,3 +50,7 @@ void Tag::changeSortingCriteria(const string& userOption) {
 bool Tag::getTagRating() {
 	return isHighToLow;
 }
+
+bool Tag::getTagDate() {
+	return isNewToOld;
+}
