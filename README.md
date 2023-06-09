@@ -114,5 +114,4 @@ Movie list: This interface displays a list of generated movie recommendations.
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- 
+  We practiced test driven design through the utilization of [Google C++ Testing Framework](https://github.com/google/googletest) to create unit tests for our functions. This proved to be a useful development strategy since our project involved the use of many different functions and classes.
