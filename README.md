@@ -40,8 +40,11 @@ The diagram above gives a basic guideline to our screen layout. From the menu, w
 
 ### Screen Layouts
 
-This is the layout of each of our screens:
-![Screen Layouts](ImageFiles/Screen_Layouts.png)
+![Executable](ImageFiles/title.png)
+  ![Executable](ImageFiles/genre.png)
+  ![Executable](ImageFiles/director.png)
+  ![Executable](ImageFiles/year.png)
+  ![Executable](ImageFiles/rating.png)
 
 Main menu: The user will first see the main menu. The two design modes we will use for this project are getting movie recommendations by selecting tags or entering a movie name. Users select the mode they want from the main menu.
 
@@ -68,11 +71,7 @@ Movie list: This interface displays a list of generated movie recommendations.
  
  ## Screenshots
  ![Testcases](ImageFiles/test_cases.png)
-  ![Executable](ImageFiles/title.png)
-  ![Executable](ImageFiles/genre.png)
-  ![Executable](ImageFiles/director.png)
-  ![Executable](ImageFiles/year.png)
-  ![Executable](ImageFiles/rating.png)
+  
  ## Installation/Usage
  1. Recursively clone this repository
  2. CD into the repository
