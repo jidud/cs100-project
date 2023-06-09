@@ -5,6 +5,7 @@
 #include "../header/Title.h"
 #include "../header/MovieList.h"
 #include "../header/Movie.h"
+#include <iostream>
 #include <fstream>
 #include <sstream>
 #include <string>
@@ -23,13 +24,13 @@ void MovieList::parseData(string filename) {
 
     string movieTitle = "";
     string genre = "";
-    vector<string> genres;
+    vector<string> genres = {};
     string director = "";
     string year = "";
     string rating = "";
 
     if(!infile.is_open()) {
-        cout << "Error opeing file: " << filename << endl;
+        cout << "Error opening file: " << filename << endl;
         return;
     }
 
@@ -74,8 +75,8 @@ void MovieList::parseData(string filename) {
             rating += line[i];
             i++;
         }
-        int yearNum = stoi(year);
-        double ratingDouble = atof(rating.c_str());
+        int yearNum = atoi(year.c_str());
+        double ratingDouble = atol(rating.c_str());
 
         Movie curMovie(movieTitle, genres, director, yearNum, ratingDouble);
         addMovie(curMovie);
@@ -91,9 +92,9 @@ void MovieList::printFive() const {
     for(int i = 0; i < 5 && i < movieList.size(); ++i) {
         cout << endl;
         cout << i+1 << "." << endl;
-        cout << "Movie Title: " << movieList[i].movieTitle->getTitle() << endl;
+        cout << "Movie Title: " << movieList.at(i).movieTitle->getTitle() << endl;
         vector<string>listGenres;
-        listGenres = movieList[i].movieGenres->getGenres();
+        listGenres = movieList.at(i).movieGenres->getGenres();
         cout << "Genres: ";
         for (int j = 0; j < listGenres.size(); ++j) {
             if(j != listGenres.size()-1) {
@@ -102,9 +103,9 @@ void MovieList::printFive() const {
                 cout << listGenres[j] << endl;
             }
         }
-        cout << "Director: " << movieList[i].movieDirector->getDirector() << endl;
-        cout << "Release Year: " <<  movieList[i].movieYear->getReleaseYear() << endl;
-        cout << "Rating: " << movieList[i].movieRating->getRating() << endl;
+        cout << "Director: " << movieList.at(i).movieDirector->getDirector() << endl;
+        cout << "Release Year: " <<  movieList.at(i).movieYear->getReleaseYear() << endl;
+        cout << "Rating: " << movieList.at(i).movieRating->getRating() << endl;
     }
 }
 Movie MovieList::at(int index) {
@@ -116,8 +117,8 @@ void MovieList::sortByTitle(string title) {
     int count = 0;
 
     for(int i = 0; i < movieList.size(); ++i) {
-        if(movieList[i].movieTitle->getTitle().find(title) != -1 && count < 5) {
-            swap(movieList[count], (movieList[i]));
+        if(movieList.at(i).movieTitle->getTitle().find(title) != -1 && count < 5) {
+            swap(movieList.at(count), (movieList.at(i)));
             count++;
         }
         if(count >= 5) {
@@ -131,9 +132,9 @@ void MovieList::sortByGenre(string genre) {
     int count = 0;
 
     for(int i = 0; i < movieList.size(); ++i) {
-        if(find(movieList[i].movieGenres->getGenres().begin(), movieList[i].movieGenres->getGenres().end(), genre) != movieList[i].movieGenres->getGenres().end()) {
+        if(find(movieList.at(i).movieGenres->getGenres().begin(), movieList.at(i).movieGenres->getGenres().end(), genre) != movieList.at(i).movieGenres->getGenres().end()) {
             if(count < 5) {
-                swap(movieList[count], movieList[i]);
+                swap(movieList.at(count), movieList.at(i));
                 count++;
             }
         }
@@ -148,8 +149,8 @@ void MovieList::sortByDirector(string director) {
     int count = 0;
 
     for(int i = 0; i < movieList.size(); ++i) {
-        if(movieList[i].movieDirector->getDirector().find(director) != -1 && count < 5) { 
-            swap(movieList[count], (movieList[i]));
+        if(movieList.at(i).movieDirector->getDirector().find(director) != -1 && count < 5) { 
+            swap(movieList.at(count), (movieList.at(i)));
             count++;
         }
         if(count >= 5) {
@@ -164,8 +165,8 @@ void MovieList::sortByReleaseYear(int year) {
 
     for(int i = 0; i < movieList.size(); ++i) {
         //contain does not work with int/double
-        if(movieList[i].movieYear->getReleaseYear() == year && count < 5) {
-            swap(movieList[count], (movieList[i]));
+        if(movieList.at(i).movieYear->getReleaseYear() == year && count < 5) {
+            swap(movieList.at(count), (movieList.at(i)));
             count++;
         }
         if(count >= 5) {
@@ -180,8 +181,8 @@ void MovieList::sortByRating(double rating) {
 
     for(int i = 0; i < movieList.size(); ++i) {
         //contain does not work with int/double
-        if(movieList[i].movieRating->getRating() == rating && count < 5) {
-            swap(movieList[count], (movieList[i]));
+        if(movieList.at(i).movieRating->getRating() == rating && count < 5) {
+            swap(movieList.at(count), (movieList.at(i)));
             count++;
         }
         if(count >= 5) {
