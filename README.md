@@ -54,7 +54,8 @@ The diagram above gives a basic guideline to our screen layout. From the menu, w
 
 ### Screen Layouts
 
-This is the layout of each of our screens ([here](https://lucid.app/lucidchart/a003f8a0-d5a4-4db0-b977-7398b10bc704/edit?beaconFlowId=7003D2A67BF28FE0&invitationId=inv_c3e23e90-8755-4936-a625-4f5f18f1564d&page=Z5eWzkaaxa7b#)).
+This is the layout of each of our screens:
+![Screen Layouts](ImageFiles/Screen_Layouts.png)
 
 Main menu: The user will first see the main menu. The two design modes we will use for this project are getting movie recommendations by selecting tags or entering a movie name. Users select the mode they want from the main menu.
 
@@ -91,5 +92,4 @@ Movie list: This interface displays a list of generated movie recommendations.
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- 
+  We practiced test driven design through the utilization of [Google C++ Testing Framework](https://github.com/google/googletest) to create unit tests for our functions. This proved to be a useful development strategy since our project involved the use of many different functions and classes.
