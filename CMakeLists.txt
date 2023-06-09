@@ -17,4 +17,17 @@ add_executable(runAllTests
 
 )
 
+add_executable(run_rec
+  src/main.cpp
+  src/Display.cpp
+  src/Genre.cpp
+  src/Director.cpp
+  src/Title.cpp
+  src/Rating.cpp
+  src/Year.cpp
+  src/MovieList.cpp
+  src/Movie.cpp
+
+)
+
 target_link_libraries(runAllTests gmock gtest gtest_main)

@@ -77,6 +77,6 @@ Movie list: This interface displays a list of generated movie recommendations.
  2. CD into the repository
  3. run cmake .
  4. run make
- 5. run ./runAllTests
+ 5. run ./runAllTests or ./run_rec
  ## Testing
   We practiced test driven design through the utilization of [Google C++ Testing Framework](https://github.com/google/googletest) to create unit tests for our functions. This proved to be a useful development strategy since our project involved the use of many different functions and classes.
