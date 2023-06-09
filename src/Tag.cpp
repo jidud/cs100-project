@@ -5,7 +5,7 @@ Tag::Tag() : isHighToLow{ true }, isNewToOld{ true } { }
 void Tag::addTagGener(const string& newTagGener) {
 	tagGener.push_back(newTagGener);
 
-	cout << tagGener.at(0);
+	//cout << tagGener.at(0);
 }
 
 void Tag::displayTagGener() {
@@ -55,4 +55,16 @@ bool Tag::getTagRating() {
 
 bool Tag::getTagDate() {
 	return isNewToOld;
+}
+
+vector<string>* Tag::getTagGener() {
+	return &tagGener;
+}
+
+vector<string>* Tag::getTagDirector() {
+	return &tagDirector;
+}
+
+vector<string>* Tag::getTagActor() {
+	return &tagActor;
 }

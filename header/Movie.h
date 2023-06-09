@@ -18,16 +18,14 @@ class Rating;
 class Year;
 
 class Movie {
-    public:
-        Title* movieTitle;
-        Genre* movieGenres;
-        Director* movieDirector;
-        Year* movieYear;
-        Rating* movieRating;
+public:
+    Title* movieTitle;
+    Genre* movieGenres;
+    Director* movieDirector;
+    Year* movieYear;
+    Rating* movieRating;
 
-        Movie(string title, vector<string> genres, string directorName, int releaseYear, double rating);
+    Movie(string title, vector<string>* genres, string directorName, int releaseYear, double rating);
 };
-
-
 
 #endif

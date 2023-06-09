@@ -26,5 +26,8 @@ class Tag {
 		void changeSortingCriteria(const string& userOption);
 		bool getTagRating();
 		bool getTagDate();
+		vector<string>* getTagGener();
+		vector<string>* getTagDirector();
+		vector<string>* getTagActor();
 };
 #endif
