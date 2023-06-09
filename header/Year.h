@@ -1,7 +1,6 @@
 #ifndef YEAR_H
 #define YEAR_H
 
-#include <vector>
 #include "../header/Movie.h"
 
 using namespace std;
@@ -18,6 +17,5 @@ public:
 	Year(int year);
 	void setReleaseYear(int _releaseYear);
 	int getReleaseYear();
-	void sortByReleaseYear(vector<Movie*>*);
 };
 #endif

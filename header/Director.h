@@ -1,6 +1,6 @@
 #ifndef DIRECTOR_H
 #define DIRECTOR_H
-#include <vector>
+
 #include "../header/Movie.h"
 
 using namespace std;
@@ -15,7 +15,6 @@ class Director {
         Director(string name);
         void setDirector(string name);
         string getDirector();
-        void sortByDirector(vector<Movie*>*);
 };
 
 #endif

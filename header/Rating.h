@@ -18,6 +18,5 @@ public:
 	Rating(double _rating);
 	void setRating(double _rating);
 	double getRating();
-	void sortByRating(vector<Movie*>*);
 };
 #endif
