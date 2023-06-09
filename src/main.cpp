@@ -29,6 +29,8 @@ int main() {
 	//g++ src/main.cpp src/Display.cpp src/Director.cpp src/Genre.cpp src/Movie.cpp src/MovieList.cpp src/Rating.cpp src/Title.cpp src/Year.cpp 
 	MovieList list1;
 	list1.parseData("moiveData.csv");
+	Movie movie(inpTitle, genres, inpDirector, inpYear, inpRating);
+	list1.addMovie(movie);
 
 
 	menu1.displayMainMenu();
@@ -67,7 +69,9 @@ int main() {
 			getline(cin, inpDirector);
 			list1.sortByDirector(inpDirector);
 			Movie movie(inpTitle, genres, inpDirector, inpYear, inpRating);
+
 			list1.addMovie(movie);
+
 			cout << endl;
 			cout << "-------------------------------------------------------------" << endl;
 			list1.printFive();
