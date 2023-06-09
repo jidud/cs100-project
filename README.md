@@ -72,7 +72,7 @@ Movie name search: This interface displays the tags and current sorting criteria
 Movie list: This interface displays a list of generated movie recommendations.
 
 ## Class Diagram
- ![OMT Class Diagram](ImageFiles/CD3.png)
+ ![OMT Class Diagram](ImageFiles/Class_Diagram_2.png)
 
  The diagram above shows the main classes that will be used in the program. As can be seen by the image, the main calling class will be the MovieMenu class which will call the recommender systems by action based on user input in the command prompt line. Following this we will store our database of movies in a CSV file. We will have a Movie class where it will set the movie by its title, genre, director, year, and rating. In MovieList we will be using vectors which will allow us to parse through a list of movies and get the top 5 recommendations based on the chosen sort function. We will also have five derived classes, Title, Genre, Director, Year, and Rating. In these classes we will get each of its input, set it.
  
