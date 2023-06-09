@@ -24,7 +24,7 @@ void MovieList::parseData(string filename) {
 
     string movieTitle = "";
     string genre = "";
-    vector<string> genres = {};
+    vector<string> genres {};
     string director = "";
     string year = "";
     string rating = "";
