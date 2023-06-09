@@ -74,8 +74,17 @@ Movie list: This interface displays a list of generated movie recommendations.
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ ![Testcases](ImageFiles/test_cases.png)
+  ![Executable](ImageFiles/title.png)
+  ![Executable](ImageFiles/genre.png)
+  ![Executable](ImageFiles/director.png)
+  ![Executable](ImageFiles/year.png)
+  ![Executable](ImageFiles/rating.png)
  ## Installation/Usage
- > Instructions on installing and running your application
+ 1. Recursively clone this repository
+ 2. CD into the repository
+ 3. run cmake .
+ 4. run make
+ 5. run ./runAllTests
  ## Testing
   We practiced test driven design through the utilization of [Google C++ Testing Framework](https://github.com/google/googletest) to create unit tests for our functions. This proved to be a useful development strategy since our project involved the use of many different functions and classes.
