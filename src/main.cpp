@@ -3,98 +3,100 @@
 #include <vector>
 
 #include "../header/Display.h"
-#include "../header/Tag.h"
-//#include "../header/MovieList.h"
+#include "../header/Genre.h"
+#include "../header/Director.h"
+#include "../header/Rating.h"
+#include "../header/Year.h"
+#include "../header/Title.h"
+#include "../header/MovieList.h"
+#include "../header/Movie.h"
+
+
 
 using namespace std;
 
-void enterMovieName(string& userMovieName);
-
 int main() {
-	vector<string> allGenres = { "g1", "g2", "g3"};
-	vector<string> allDirectors = { "d1", "d2", "d3" };
-	vector<string> allActors = { "a1", "a2", "a3" };
 	Display menu1;
 	string userOption = "";
-	Tag tag1;
-	string userMovieName = "";
-	string ans = "1";
+	string inpTitle = "";
+	string inpGenre = "";
+	string inpDirector = "";
+	int inpYear = 0;
+	double inpRating = 0.0;
+	string ans = "";
 
-	//g++ main.cpp Display.cpp Tag.cpp Director.cpp Genre.cpp Movie.cpp MovieList.cpp Rating.cpp Title.cpp Year.cpp
+	//g++ main.cpp Display.cpp Director.cpp Genre.cpp Movie.cpp MovieList.cpp Rating.cpp Title.cpp Year.cpp
 	//
-	//MovieList list1;
-	//list1.parseData("movieData.csv");
-	//list1.printFive();
-
-
+	MovieList list1;
+	list1.parseData("movieData.csv");
 	//
+
 	menu1.displayMainMenu();
-	
-	
+	cout << endl;
+	cout << "Enter a number (1-6): ";
 	getline(cin, userOption);
-
-	if (userOption ==  "1") {
-		while (ans != "6") {
-			menu1.displayTagsSearch(&tag1);
-
+	cout << endl;
+	while (ans != "6") {
+		if (userOption == "1") {
+			cout << "Enter a keyword to filter: " << endl;
+			getline(cin, inpTitle);
+			list1.sortByTitle(inpTitle);
+			cout << endl;
+			cout << "-------------------------------------------------------------" << endl;
+			list1.printFive();
+			cout << "-------------------------------------------------------------" << endl;
+			cout << endl;
+			userOption = 6;
+		}
+		else if (userOption == "2") {
+			cout << "Enter a genre to sort by: " << endl;
+			getline(cin, inpGenre);
+			list1.sortByGenre(inpGenre);
+			cout << endl;
+			cout << "-------------------------------------------------------------" << endl;
+			list1.printFive();
+			cout << "-------------------------------------------------------------" << endl;
+			userOption = 6;
+		}
+		else if (userOption == "3") {
+			cout << "Enter a director to filter by: " << endl;
+			getline(cin, inpDirector);
+			list1.sortByDirector(inpDirector);
+			cout << endl;
+			cout << "-------------------------------------------------------------" << endl;
+			list1.printFive();
+			cout << "-------------------------------------------------------------" << endl;
+			userOption = 6;
+		}
+		else if (userOption == "4") {
+			cout << "Enter a year to filer by: " << endl;
+			cin >> inpYear;
+			list1.sortByReleaseYear(inpYear);
+			cout << endl;
+			cout << "-------------------------------------------------------------" << endl;
+			list1.printFive();
+			cout << "-------------------------------------------------------------" << endl;
+			userOption = 6;
+		}
+		else if (userOption == "5") {
+			cout << "Enter a rating to filer by: " << endl;
+			cin >> inpRating;
+			list1.sortByRating(inpRating);
+			cout << endl;
+			cout << "-------------------------------------------------------------" << endl;
+			list1.printFive();
+			cout << "-------------------------------------------------------------" << endl;
+			userOption = 6;
+		}
+		else if (userOption == "6") {
+			return 0;
+		}
+		else {
+			menu1.displayMainMenu();
+			cout << endl;
+			cout << "Enter a number (1-6): ";
 			getline(cin, userOption);
-
-			if (userOption == "1") {
-				menu1.displayAllGenres(allGenres);
-
-				getline(cin, userOption);
-				string newTagGenre = allGenres.at(stoi(userOption) - 1);
-
-				tag1.addTagGener(newTagGenre);
-			}
-			else if (userOption == "2") {
-				menu1.displayAllDirectors(allDirectors);
-
-				getline(cin, userOption);
-				string newTagDirector = allDirectors.at(stoi(userOption) - 1);
-
-				tag1.addTagDirector(newTagDirector);
-			}
-			else if (userOption == "3") {
-				menu1.displayAllActor(allActors);
-
-				getline(cin, userOption);
-				string newTagActor = allActors.at(stoi(userOption) - 1);
-
-				tag1.addTagActor(newTagActor);
-			}
-			else if (userOption == "4") {
-				menu1.displaySortingCriteria();
-				getline(cin, userOption);
-				
-				tag1.changeSortingCriteria(userOption);
-			}
-			else if (userOption == "5") {
-				//displayRecommendationMovieList();
-			}
-			else if (userOption == "6") {
-				return 0;
-			}
-			else {
-				return 0;
-			}
+			cout << endl;
 		}
 	}
-	else if (userOption == "2") {
-		enterMovieName(userMovieName);
-	}
-	else if (userOption == "3") {
-		return 0;
-	}
-	else {
-		return 0;
-	}
-
-	return 0;
-}
-
-void enterMovieName(string& userMovieName) {
-	cout << "Please enter a movie name:" << endl;
-	getline(cin, userMovieName);
-	//cout << userMovieName;
 }
