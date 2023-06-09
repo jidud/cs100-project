@@ -115,6 +115,13 @@ TEST (MovieListTest, ParseData) {
     EXPECT_EQ(ml.at(1).movieDirector->getDirector(), "Ridley Scott");
     
 }
+/*---------------------------------------------------------------------------*/
+TEST (PrintTest, printFive) {
+    MovieList ml;
+    ml.parseData("movieData.csv");
+
+    ml.printFive();
+}
 
 /*---------------------------------------------------------------------------*/
 
