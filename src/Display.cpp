@@ -54,7 +54,7 @@ void Display::displayTagsSearch(Tag* tag1) {
 	cout << "Please enter a number to select an option:" << endl;
 }
 
-void Display::displayAllGeners(const vector<string>& allGeners) {
+void Display::displayAllGenres(const vector<string>& allGeners) {
 	cout << "Geners and Subgeners" << endl;
 	cout << endl;
 

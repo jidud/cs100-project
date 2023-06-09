@@ -15,7 +15,7 @@ class Display {
 	public:
 		void displayMainMenu();
 		void displayTagsSearch(Tag* tag1);
-		void displayAllGeners(const vector<string>& allGeners);
+		void displayAllGenres(const vector<string>& allGeners);
 		void displayAllDirectors(const vector<string>& allDirectors);
 		void displayAllActor(const vector<string>& allActors);
 		void displaySortingCriteria();
