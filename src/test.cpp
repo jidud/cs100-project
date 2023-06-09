@@ -105,16 +105,16 @@ TEST(YearTest, SortByYear) {
 
 // /*--------------------------Tests for MovieList.cpp--------------------------*/
 
-// //test parseData()
-// TEST (MovieListTest, ParseData) {
-//     MovieList ml;
-//     ml.parseData("movieData.csv");
+//test parseData()
+TEST (MovieListTest, ParseData) {
+    MovieList ml;
+    ml.parseData("movieData.csv");
 
 
-//     EXPECT_EQ(ml[0].getTitle(), "Movie 1");
-//     EXPECT_EQ(ml[1].getDirector().getDirector(), "Director 2");
+    EXPECT_EQ(ml.at(0).movieTitle->getTitle(), "Guardians of the Galaxy");
+    EXPECT_EQ(ml.at(1).movieDirector->getDirector(), "Ridley Scott");
     
-// }
+}
 
 /*---------------------------------------------------------------------------*/
 

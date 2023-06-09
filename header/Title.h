@@ -13,6 +13,8 @@ class Title {
         string title;
         
     public:
+        Title();
+        Title(string movieTitle);
         void setTitle(string movieTitle);
         string getTitle();
         void sortByTitle(vector<Movie*>*);

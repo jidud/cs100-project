@@ -13,6 +13,7 @@ class MovieList {
         void parseData(string filename);
         void addMovie(Movie movie);
         void printFive() const;
+        Movie at(int index);
 
         void sortByTitle(string title);
         void sortByGenre(string genre);

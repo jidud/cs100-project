@@ -14,6 +14,8 @@ private:
 	int releaseYear;
 
 public:
+	Year();
+	Year(int year);
 	void setReleaseYear(int _releaseYear);
 	int getReleaseYear();
 	void sortByReleaseYear(vector<Movie*>*);

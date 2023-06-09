@@ -11,6 +11,8 @@ class Genre {
     private:
         vector<string> genreNames;
     public:
+        Genre();
+        Genre(vector<string> names);
         void setGenres(vector<string> names);
         vector<string> getGenres();
         void sortByGenre(vector<Movie*>*);

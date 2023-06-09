@@ -11,6 +11,8 @@ class Director {
     private:
         string directorName;
     public:
+        Director();
+        Director(string name);
         void setDirector(string name);
         string getDirector();
         void sortByDirector(vector<Movie*>*);

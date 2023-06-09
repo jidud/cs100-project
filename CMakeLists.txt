@@ -11,6 +11,7 @@ add_executable(runAllTests
   src/Rating.cpp
   src/Year.cpp
   src/MovieList.cpp
+  src/Movie.cpp
 
 )
 

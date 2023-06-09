@@ -77,8 +77,8 @@ void MovieList::parseData(string filename) {
         int yearNum = stoi(year);
         double ratingDouble = atof(rating.c_str());
 
-        // Movie curMovie(movieTitle, genres, director, yearNum, ratingDouble);
-        // addMovie(curMovie);
+        Movie curMovie(movieTitle, genres, director, yearNum, ratingDouble);
+        addMovie(curMovie);
     }
 }
 
@@ -106,6 +106,9 @@ void MovieList::printFive() const {
         cout << "Release Year: " <<  movieList[i].movieYear->getReleaseYear() << endl;
         cout << "Rating: " << movieList[i].movieRating->getRating() << endl;
     }
+}
+Movie MovieList::at(int index) {
+    return movieList.at(index);
 }
 
 
