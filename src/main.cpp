@@ -20,11 +20,11 @@ int main() {
 	string userMovieName = "";
 	string ans = "1";
 
-	//g++ main.cpp Display.cpp Tag.cpp Director.cpp Genre.cpp
+	//g++ main.cpp Display.cpp Tag.cpp Director.cpp Genre.cpp Movie.cpp MovieList.cpp Rating.cpp Title.cpp Year.cpp
 	//
-	MovieList list1;
-	list1.parseData("movieData.csv");
-	list1.printFive();
+	//MovieList list1;
+	//list1.parseData("movieData.csv");
+	//list1.printFive();
 
 
 	//
