@@ -4,13 +4,14 @@
 
 #include "../header/Display.h"
 #include "../header/Tag.h"
+//#include "../header/MovieList.h"
 
 using namespace std;
 
 void enterMovieName(string& userMovieName);
 
 int main() {
-	vector<string> allGeners = { "g1", "g2", "g3"};
+	vector<string> allGenres = { "g1", "g2", "g3"};
 	vector<string> allDirectors = { "d1", "d2", "d3" };
 	vector<string> allActors = { "a1", "a2", "a3" };
 	Display menu1;
@@ -19,6 +20,14 @@ int main() {
 	string userMovieName = "";
 	string ans = "1";
 
+	//g++ main.cpp Display.cpp Tag.cpp Director.cpp Genre.cpp Movie.cpp MovieList.cpp Rating.cpp Title.cpp Year.cpp
+	//
+	//MovieList list1;
+	//list1.parseData("movieData.csv");
+	//list1.printFive();
+
+
+	//
 	menu1.displayMainMenu();
 	
 	
@@ -31,12 +40,12 @@ int main() {
 			getline(cin, userOption);
 
 			if (userOption == "1") {
-				menu1.displayAllGeners(allGeners);
+				menu1.displayAllGenres(allGenres);
 
 				getline(cin, userOption);
-				string newTagGener = allGeners.at(stoi(userOption) - 1);
+				string newTagGenre = allGenres.at(stoi(userOption) - 1);
 
-				tag1.addTagGener(newTagGener);
+				tag1.addTagGener(newTagGenre);
 			}
 			else if (userOption == "2") {
 				menu1.displayAllDirectors(allDirectors);

@@ -1,5 +1,7 @@
 #include "../header/Tag.h"
 
+Tag::Tag() : isHighToLow{ true }, isNewToOld{ true } { }
+
 void Tag::addTagGener(const string& newTagGener) {
 	tagGener.push_back(newTagGener);
 
