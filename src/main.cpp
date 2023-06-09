@@ -22,9 +22,9 @@ int main() {
 
 	//g++ main.cpp Display.cpp Tag.cpp Director.cpp Genre.cpp
 	//
-	//MovieList list1;
-	//list1.parseData("movieData.csv");
-	//list1.printFive();
+	MovieList list1;
+	list1.parseData("movieData.csv");
+	list1.printFive();
 
 
 	//

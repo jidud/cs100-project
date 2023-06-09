@@ -16,7 +16,7 @@ void Display::displayMainMenu() {
 void Display::displayTagsSearch(Tag* tag1) {
 	cout << "Current Movie Tags:" << endl;
 	cout << endl;
-	cout << "Geners and Subgeners: " << endl;
+	cout << "Genres and Subgenres: " << endl;
 	tag1->displayTagGener();
 	cout << "Directors: " << endl;
 	tag1->displayTagDirector();
@@ -43,7 +43,7 @@ void Display::displayTagsSearch(Tag* tag1) {
 	cout << endl;
 
 	cout << "Options:" << endl;
-	cout << "1. Add a tag on geners or subgeners" << endl;
+	cout << "1. Add a tag on genres or subgenres" << endl;
 	cout << "2. Add a tag on directors" << endl;
 	cout << "3. Add a tag on actors" << endl;
 	cout << "4. Change the sorting Criteria" << endl;
@@ -55,7 +55,7 @@ void Display::displayTagsSearch(Tag* tag1) {
 }
 
 void Display::displayAllGenres(const vector<string>& allGeners) {
-	cout << "Geners and Subgeners" << endl;
+	cout << "Genres and Subgenres" << endl;
 	cout << endl;
 
 	for (unsigned int i = 0; i < allGeners.size(); ++i) {
@@ -63,7 +63,7 @@ void Display::displayAllGenres(const vector<string>& allGeners) {
 	}
 	cout << endl;
 
-	cout << "Please enter a number to select a gener:" << endl;
+	cout << "Please enter a number to select a genre:" << endl;
 }
 
 void Display::displayAllDirectors(const vector<string>& allDirectors) {
