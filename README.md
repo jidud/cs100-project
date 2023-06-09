@@ -53,7 +53,6 @@ In this project, movies will be sorted and categorized into their respective gen
 The diagram above gives a basic guideline to our screen layout. From the menu, we would be able to search a movie based on genre, name/title, and/or by actor/director. There will be a filter tab where we would be able to include/exclude and sort out the movies based on sub-genres, name/title, date/year, actor/director, and rating. After all choices are chosen the user would able to "enter" and get a movie recommended by their choice.
 
 ### Screen Layouts
-<!-- /*> Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.*/ -->
 
 This is the layout of each of our screens:
 ![Screen Layouts](ImageFiles/Screen_Layouts.png)
@@ -73,34 +72,13 @@ Movie name search: This interface displays the tags and current sorting criteria
 Movie list: This interface displays a list of generated movie recommendations.
 
 ## Class Diagram
- ![OMT Class Diagram](ImageFiles/Class_Diagram_2.png)
+ ![OMT Class Diagram](ImageFiles/CD3.png)
 
- The diagram above shows the main classes that will be used in the program. As can be seen by the image, the main calling class will be the MovieMenu class which wil call the recommender systems by action baseed on user input in the command prompt line. Following this we are planning on using a linked list to store our database of movies through the use of the class "movieList", which contains a Node and data which consists of a movie. We will also have five derived classes, Title, Genre, Director, Year, and Rating. In these classes we will get each of its input, set it, and will sort it.
+ The diagram above shows the main classes that will be used in the program. As can be seen by the image, the main calling class will be the MovieMenu class which will call the recommender systems by action based on user input in the command prompt line. Following this we will store our database of movies in a CSV file. We will have a Movie class where it will set the movie by its title, genre, director, year, and rating. In MovieList we will be using vectors which will allow us to parse through a list of movies and get the top 5 recommendations based on the chosen sort function. We will also have five derived classes, Title, Genre, Director, Year, and Rating. In these classes we will get each of its input, set it.
  
  SOLID - We used the Single Responsibility Principle(SRP). Originally, in our class diagram, title, genre, director, year, and rating were all in one class, but we changed it so that each action can do its own thing, so they are all made into its own single class. This allowed us to make our code more simpler and it is now easier to keep track of errors.
 
- Database - We are going to have a file that stores a list of movies with its genre, title, rating, director, and year. This file will be used as a database that gives us our output.
- 
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
- 
- > BEFORE the meeting you should do the following:
- > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
- > * Considering the SOLID design principles, reflect back on your class diagram and think about how you can use the SOLID principles to improve your design. You should then update the README.md file by adding the following:
- >   * A new class diagram incorporating your changes after considering the SOLID principles.
- >   * For each update in your class diagram, you must explain in 3-4 sentences:
- >     * What SOLID principle(s) did you apply?
- >     * How did you apply it? i.e. describe the change.
- >     * How did this change help you write better code?
- > * Perform a new sprint plan like you did in Phase II.
- > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
- 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
-
+ Database - We are going to have a .csv file that stores a list of movies with its title, genre, director, year, and rating. This file will be used as a database that gives us our top five outputs. Streams will be used to access the file.
  
  > ## Final deliverable
  > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
