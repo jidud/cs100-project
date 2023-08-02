@@ -61,9 +61,10 @@ TEST(TitleTest, SortTitle) {
 
     // Sorts by genre
     movieList.sortByTitle("The");
+    movieList.parseData("movieData.csv");
 
     // Print the sorted movies
-    movieList.printFive();
+    gitmovieList.printFive();
 }
 
 /*---------------------------------------------------------------------------*/
